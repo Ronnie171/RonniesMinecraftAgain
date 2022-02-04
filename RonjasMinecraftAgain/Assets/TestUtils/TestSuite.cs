@@ -99,6 +99,14 @@ namespace TestUtils {
             Assert.IsInstanceOf(typeof(T), asset, $"");
             return asset as T;
         }
+        protected T[] LoadAssets<T>(string path) where T : class {
+            FileAssert.Exists(new FileInfo(path));
+            var assets = AssetDatabase.LoadAllAssetsAtPath(path);
+            Assert.IsNotNull(assets, $"Could not load asset of type {typeof(T).Name} at path '{path}'!");
+            return assets
+                .OfType<T>()
+                .ToArray();
+        }
         protected GameObject LoadPrefab(string path) {
             FileAssert.Exists(new FileInfo(path));
             var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(path);

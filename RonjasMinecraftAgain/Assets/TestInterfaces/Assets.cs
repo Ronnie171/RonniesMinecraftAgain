@@ -15,6 +15,7 @@ namespace TestInterfaces {
         public const string blockPrefab = "Assets/Prefabs/Block.prefab";
         public const string userInterfacePrefab = "Assets/Prefabs/UserInterface.prefab";
         public const string levelPrefab = "Assets/Prefabs/Level.prefab";
+        public const string gameManagerPrefab = "Assets/Prefabs/GameManager.prefab";
 
         public const float avatarHeight = 1.8f;
         public const float avatarRadius = 0.3f;
@@ -44,6 +45,20 @@ namespace TestInterfaces {
         public const string playerBuildBlockAction = "BuildBlock";
         public const string playerDestroyBlockAction = "DestroyBlock";
 
+        public const string uiActionMap = "UI";
+
+        public const string uiHotkey1Action = "SelectHotkey1";
+        public const string uiHotkey2Action = "SelectHotkey2";
+        public const string uiHotkey3Action = "SelectHotkey3";
+        public const string uiHotkey4Action = "SelectHotkey4";
+        public const string uiHotkey5Action = "SelectHotkey5";
+        public const string uiHotkey6Action = "SelectHotkey6";
+        public const string uiHotkey7Action = "SelectHotkey7";
+        public const string uiHotkey8Action = "SelectHotkey8";
+        public const string uiHotkey9Action = "SelectHotkey9";
+        public const string uiHotkeyMouseAction = "SelectHotkeyMouse";
+        public const string uiTogglePauseAction = "TogglePause";
+
         public const string emptyTag = "Untagged";
         public const string avatarTag = "Player";
         public const string cameraTag = "MainCamera";
@@ -66,6 +81,9 @@ namespace TestInterfaces {
         public const string terrainMaterial = "Assets/Art/Materials/Terrain.mat";
         public const string terrainTexture = "Assets/Art/Textures/terrain.png";
         public const string terrainShader = "Assets/Art/Shaders/BlockTile.shadergraph";
+
+        public const string guiSprites = "Assets/Art/Textures/gui.png";
+        public const string terrainSprites = "Assets/Art/Textures/terrain_sprites.png";
 
         public const string defaultCubeCreator = "Assets/Art/Models/DefaultCubeCreator.asset";
         public const string defaultCubeMesh = "Assets/Art/Models/DefaultCube.asset";
