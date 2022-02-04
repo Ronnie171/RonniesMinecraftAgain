@@ -2,8 +2,10 @@ using NUnit.Framework;
 using System.Linq;
 using TestInterfaces;
 using TestUtils;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 namespace Tests.EditMode {
     public class Test13_HUDAndPauseMenu : TestSuite {
@@ -154,6 +156,32 @@ namespace Tests.EditMode {
         public void A06b_GameManagerPrefabContainsIGameManager(string path) {
             var prefab = LoadPrefab(path);
             CustomAssert.HasComponentInChildren<IGameManager>(prefab);
+        }
+        [TestCase(Assets.gameManagerPrefab)]
+        public void A06c_GameManagerPrefabContainsCanvas(string path) {
+            var prefab = LoadPrefab(path);
+            CustomAssert.HasComponentInChildren<Canvas>(prefab);
+        }
+        [TestCase(Assets.gameManagerPrefab, 3)]
+        public void A06d_GameManagerCanvasContainsButtons(string path, int buttonCount) {
+            var prefab = LoadPrefab(path);
+            CustomAssert.HasComponentInChildren<Canvas>(prefab, out var canvas);
+            var buttons = canvas.GetComponentsInChildren<Button>();
+            Assert.GreaterOrEqual(buttons.Length, buttonCount, $"The pause menu canvas should have at least 3 buttons!");
+        }
+        [TestCase(Assets.gameManagerPrefab, "Continue")]
+        [TestCase(Assets.gameManagerPrefab, "Restart")]
+        [TestCase(Assets.gameManagerPrefab, "Quit")]
+        public void A06e_GameManagerCanvasContainsButtonWithText(string path, string label) {
+            var prefab = LoadPrefab(path);
+            CustomAssert.HasComponentInChildren<Canvas>(prefab, out var canvas);
+            var labels = canvas
+                .GetComponentsInChildren<Button>()
+                .SelectMany(button => Enumerable.Empty<string>()
+                    .Union(button.GetComponentsInChildren<TextMeshProUGUI>().Select(text => text.text))
+                    .Union(button.GetComponentsInChildren<Text>().Select(text => text.text))
+                );
+            CollectionAssert.Contains(labels, label, $"The pause menu canvas should have a button with the label '{label}'!");
         }
         #endregion
 

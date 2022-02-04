@@ -1,4 +1,3 @@
-using System.Text.RegularExpressions;
 using UnityEngine;
 
 namespace TestInterfaces {
@@ -8,7 +7,8 @@ namespace TestInterfaces {
             public readonly string path;
         }
 
-        public static readonly Regex emailPattern = new Regex(@"^[\w@.]+uni-bayreuth\.de$");
+        public const string emailPattern = @"^[\w@.]+uni-bayreuth\.de$";
+        public const string elearningPattern = @"^(s\d+\w+)|(bt\d+)@uni-bayreuth\.de$";
 
         public const string avatarPrefab = "Assets/Prefabs/Avatar.prefab";
         public const string floorPrefab = "Assets/Prefabs/Floor.prefab";
