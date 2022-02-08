@@ -23,22 +23,22 @@ namespace Tests.EditMode {
             var sprites = LoadAssets<Sprite>(path);
             Assert.GreaterOrEqual(spriteCount, sprites.Length, $"Spritesheet at '{path}' should contain exactly {spriteCount} sprites!");
         }
-        [TestCase(Assets.guiSprites, "hotkey_bar")]
-        [TestCase(Assets.guiSprites, "hotkey_frame")]
-        [TestCase(Assets.guiSprites, "crosshairs")]
-        [TestCase(Assets.guiSprites, "button_disabled")]
-        [TestCase(Assets.guiSprites, "button_active")]
-        [TestCase(Assets.guiSprites, "button_selected")]
+        [TestCase(Assets.guiSprites, Assets.hotkeyBarSprite)]
+        [TestCase(Assets.guiSprites, Assets.hotkeyFrameSprite)]
+        [TestCase(Assets.guiSprites, Assets.crosshairsSprite)]
+        [TestCase(Assets.guiSprites, Assets.buttonDisabledSprite)]
+        [TestCase(Assets.guiSprites, Assets.buttonActiveSprite)]
+        [TestCase(Assets.guiSprites, Assets.buttonSelectedSprite)]
         public void A01d_SpritesheetContainsSprite(string path, string spriteName) {
             var sprites = LoadAssets<Sprite>(path).Select(sprite => sprite.name);
             CollectionAssert.Contains(sprites, spriteName, $"Spritesheet at '{path}' should contain a sprite called '{spriteName}'!");
         }
-        [TestCase(Assets.guiSprites, "hotkey_bar", 182, 22)]
-        [TestCase(Assets.guiSprites, "hotkey_frame", 24, 24)]
-        [TestCase(Assets.guiSprites, "crosshairs", 9, 9)]
-        [TestCase(Assets.guiSprites, "button_disabled", 200, 20)]
-        [TestCase(Assets.guiSprites, "button_active", 200, 20)]
-        [TestCase(Assets.guiSprites, "button_selected", 200, 20)]
+        [TestCase(Assets.guiSprites, Assets.hotkeyBarSprite, 182, 22)]
+        [TestCase(Assets.guiSprites, Assets.hotkeyFrameSprite, 24, 24)]
+        [TestCase(Assets.guiSprites, Assets.crosshairsSprite, 9, 9)]
+        [TestCase(Assets.guiSprites, Assets.buttonDisabledSprite, 200, 20)]
+        [TestCase(Assets.guiSprites, Assets.buttonActiveSprite, 200, 20)]
+        [TestCase(Assets.guiSprites, Assets.buttonSelectedSprite, 200, 20)]
         public void A01e_SpritesheetSpriteIsOfTheCorrectSize(string path, string spriteName, int width, int height) {
             var sprite = LoadAssets<Sprite>(path).FirstOrDefault(sprite => sprite.name == spriteName);
             Assert.IsTrue(sprite, $"Spritesheet at '{path}' should contain a sprite called '{spriteName}'!");
@@ -144,6 +144,33 @@ namespace Tests.EditMode {
         public void A05a_AvatarContainsIHotkeyBar(string path) {
             var prefab = LoadPrefab(path);
             CustomAssert.HasComponentInChildren<IHotkeyBar>(prefab);
+        }
+        [TestCase(Assets.avatarPrefab)]
+        public void A05b_HotkeyBarHasNineBlocks(string path) {
+            var prefab = LoadPrefab(path);
+            CustomAssert.HasComponentInChildren<IHotkeyBar>(prefab, out var bar);
+            Assert.AreEqual(9, bar.blockPrefabs.Length, $"Hotkey bar should have exactly 9 blocks!");
+        }
+        [TestCase(Assets.avatarPrefab)]
+        public void A05c_HotkeyBarStartsAtZero(string path) {
+            var prefab = LoadPrefab(path);
+            CustomAssert.HasComponentInChildren<IHotkeyBar>(prefab, out var bar);
+            Assert.AreEqual(0, bar.currentIndex, $"Hotkey bar should start with the first prefab selected!");
+        }
+        [TestCase(Assets.avatarPrefab, 0, Assets.stoneBlockPrefab)]
+        [TestCase(Assets.avatarPrefab, 1, Assets.dirtBlockPrefab)]
+        [TestCase(Assets.avatarPrefab, 2, Assets.woodenPlankBlockPrefab)]
+        [TestCase(Assets.avatarPrefab, 3, Assets.cobblestoneBlockPrefab)]
+        [TestCase(Assets.avatarPrefab, 4, Assets.sandBlockPrefab)]
+        [TestCase(Assets.avatarPrefab, 5, Assets.gravelBlockPrefab)]
+        [TestCase(Assets.avatarPrefab, 6, Assets.logBlockPrefab)]
+        [TestCase(Assets.avatarPrefab, 7, Assets.leavesBlockPrefab)]
+        [TestCase(Assets.avatarPrefab, 8, Assets.glassBlockPrefab)]
+        public void A05d_HotkeyBarHasBlock(string avatarPath, int index, string blockPath) {
+            var avatarPrefab = LoadPrefab(avatarPath);
+            var blockPrefab = LoadPrefab(blockPath);
+            CustomAssert.HasComponentInChildren<IHotkeyBar>(avatarPrefab, out var bar);
+            Assert.AreEqual(blockPrefab, bar.blockPrefabs[index], $"Starting block at index {index} should be {blockPrefab.name}!");
         }
         #endregion
 

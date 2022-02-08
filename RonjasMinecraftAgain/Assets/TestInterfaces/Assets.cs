@@ -34,6 +34,18 @@ namespace TestInterfaces {
         public const string woodenPlankBlockPrefab = "Assets/Prefabs/Blocks/Block_WoodenPlank.prefab";
         public const string cobblestoneBlockPrefab = "Assets/Prefabs/Blocks/Block_Cobblestone.prefab";
 
+        public static readonly string[] defaultBlockPrefabs = new[] {
+            stoneBlockPrefab,
+            dirtBlockPrefab,
+            woodenPlankBlockPrefab,
+            cobblestoneBlockPrefab,
+            sandBlockPrefab,
+            gravelBlockPrefab,
+            logBlockPrefab,
+            leavesBlockPrefab,
+            glassBlockPrefab,
+        };
+
         public const string playerControlsAsset = "Assets/Scripts/PlayerControls.inputactions";
         public const string playerControlsScript = "Assets/Scripts/PlayerControls.cs";
 
@@ -84,6 +96,13 @@ namespace TestInterfaces {
 
         public const string guiSprites = "Assets/Art/Textures/gui.png";
         public const string terrainSprites = "Assets/Art/Textures/terrain_sprites.png";
+
+        public const string hotkeyBarSprite = "hotkey_bar";
+        public const string hotkeyFrameSprite = "hotkey_frame";
+        public const string crosshairsSprite = "crosshairs";
+        public const string buttonDisabledSprite = "button_disabled";
+        public const string buttonActiveSprite = "button_active";
+        public const string buttonSelectedSprite = "button_selected";
 
         public const string defaultCubeCreator = "Assets/Art/Models/DefaultCubeCreator.asset";
         public const string defaultCubeMesh = "Assets/Art/Models/DefaultCube.asset";
