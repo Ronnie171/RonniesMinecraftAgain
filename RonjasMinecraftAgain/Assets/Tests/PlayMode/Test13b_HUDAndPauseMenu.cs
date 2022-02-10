@@ -9,7 +9,7 @@ using UnityEngine.TestTools;
 using UnityEngine.UI;
 
 namespace Tests.PlayMode {
-    public class Test13_HUDAndPauseMenu : MinecraftTestSuite {
+    public class Test13b_HUDAndPauseMenu : MinecraftTestSuite {
         protected override float timeScale => 2;
 
         #region Aufgabe 05
@@ -147,6 +147,104 @@ namespace Tests.PlayMode {
             } else {
                 CustomAssert.AreEqual(position, hotkeyFrame.transform.position, $"Setting currentIndex to {index} should have NOT caused the frame {hotkeyFrame} to move!");
             }
+        }
+        #endregion
+
+        #region Aufgabe 06
+        [UnityTest]
+        public IEnumerator A06f_GameManagerCanBeInstantiated() {
+            var prefab = LoadPrefab(Assets.gameManagerPrefab);
+
+            var instance = InstantiateGameObject(prefab, Vector3.zero);
+
+            yield return new WaitForSecondsRealtime(0);
+
+            CustomAssert.HasComponent<IGameManager>(instance);
+            CustomAssert.HasComponentInChildren<Canvas>(instance);
+        }
+        [UnityTest]
+        [TestCase(false, ExpectedResult = null)]
+        [TestCase(true, ExpectedResult = null)]
+        public IEnumerator A06g_GameManagerCanBePaused(bool isPaused) {
+            var prefab = LoadPrefab(Assets.gameManagerPrefab);
+
+            var instance = InstantiateGameObject(prefab, Vector3.zero);
+
+            yield return new WaitForSecondsRealtime(0);
+
+            CustomAssert.HasComponent<IGameManager>(instance, out var manager);
+
+            manager.isPaused = isPaused;
+
+            yield return new WaitForSecondsRealtime(0);
+
+            Assert.AreEqual(isPaused, manager.isPaused, $"isPaused should not change on its own!");
+
+            manager.isPaused = !isPaused;
+
+            yield return new WaitForSecondsRealtime(0);
+
+            Assert.AreEqual(!isPaused, manager.isPaused, $"isPaused should not change on its own!");
+        }
+        [UnityTest]
+        [TestCase(false, 1, ExpectedResult = null)]
+        [TestCase(true, 0, ExpectedResult = null)]
+        public IEnumerator A06h_GameManagerPausedAffectsTimeScale(bool isPaused, float timeScale) {
+            var prefab = LoadPrefab(Assets.gameManagerPrefab);
+
+            var instance = InstantiateGameObject(prefab, Vector3.zero);
+
+            yield return new WaitForSecondsRealtime(0);
+
+            CustomAssert.HasComponent<IGameManager>(instance, out var manager);
+
+            manager.isPaused = isPaused;
+
+            yield return new WaitForSecondsRealtime(0);
+
+            Assert.AreEqual(timeScale, Time.timeScale, $"Setting 'isPaused = {isPaused}' should set Unity's time scale to {timeScale}!");
+        }
+        [UnityTest]
+        [TestCase(false, CursorLockMode.Locked, ExpectedResult = null)]
+        [TestCase(true, CursorLockMode.None, ExpectedResult = null)]
+        public IEnumerator A06i_GameManagerPausedAffectsCursorLock(bool isPaused, CursorLockMode state) {
+            if (Application.isBatchMode) {
+                Assert.Inconclusive();
+                yield break;
+            }
+
+            var prefab = LoadPrefab(Assets.gameManagerPrefab);
+
+            var instance = InstantiateGameObject(prefab, Vector3.zero);
+
+            yield return new WaitForSecondsRealtime(0);
+
+            CustomAssert.HasComponent<IGameManager>(instance, out var manager);
+
+            manager.isPaused = isPaused;
+
+            yield return new WaitForSecondsRealtime(0);
+
+            Assert.AreEqual(state, Cursor.lockState, $"Setting 'isPaused = {isPaused}' should set Unity's cursor lock state to {state}!");
+        }
+        [UnityTest]
+        [TestCase(false, false, ExpectedResult = null)]
+        [TestCase(true, true, ExpectedResult = null)]
+        public IEnumerator A06j_GameManagerPausedAffectsPauseMenu(bool isPaused, bool isActive) {
+            var prefab = LoadPrefab(Assets.gameManagerPrefab);
+
+            var instance = InstantiateGameObject(prefab, Vector3.zero);
+
+            yield return new WaitForSecondsRealtime(0);
+
+            CustomAssert.HasComponent<IGameManager>(instance, out var manager);
+            CustomAssert.HasComponentInChildren<Canvas>(instance, out var menu);
+
+            manager.isPaused = isPaused;
+
+            yield return new WaitForSecondsRealtime(0);
+
+            Assert.AreEqual(isActive, menu.gameObject.activeSelf, $"Setting 'isPaused = {isPaused}' should set the pause menu's active state to {isActive}!");
         }
         #endregion
 

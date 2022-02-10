@@ -6,7 +6,7 @@ using TestUtils;
 using UnityEngine;
 
 namespace Tests.EditMode {
-    public class Test12_BlockRendering : TestSuite {
+    public class Test12a_BlockRendering : TestSuite {
         private static readonly string[] cubeCreators = new[]{
             Assets.defaultCubeCreator,
             Assets.defaultCubeMesh,

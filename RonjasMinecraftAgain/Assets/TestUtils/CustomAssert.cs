@@ -9,14 +9,14 @@ namespace TestUtils {
         }
         public static void HasComponent<T>(GameObject obj, out T component) {
             Assert.IsTrue(obj, $"GameObject with copmonent {typeof(T)} is missing!");
-            Assert.IsTrue(obj.TryGetComponent<T>(out component), $"GameObject {obj} is missing a {typeof(T)} component!");
+            Assert.IsTrue(obj.TryGetComponent(out component), $"GameObject {obj} is missing a {typeof(T)} component!");
         }
         public static void HasComponentInChildren<T>(GameObject obj) {
             HasComponentInChildren<T>(obj, out _);
         }
         public static void HasComponentInChildren<T>(GameObject obj, out T component) {
             Assert.IsTrue(obj, $"GameObject with copmonent {typeof(T)} is missing!");
-            component = obj.GetComponentInChildren<T>();
+            component = obj.GetComponentInChildren<T>(true);
             Assert.IsNotNull(component, $"GameObject {obj} is missing a {typeof(T)} component!");
         }
         public static void InBounds(float actual, float expectedMinimum, float expectedMaximum, string message) {
