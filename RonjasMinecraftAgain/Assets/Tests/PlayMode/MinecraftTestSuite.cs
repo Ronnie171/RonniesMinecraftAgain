@@ -1,9 +1,11 @@
 using NUnit.Framework;
 using System.Collections;
+using System.Linq;
 using TestInterfaces;
 using TestUtils;
 using UnityEngine;
 using UnityEngine.TestTools.Utils;
+using UnityEngine.UI;
 
 namespace Tests.PlayMode {
     public class MinecraftTestSuite : TestSuite {
@@ -55,6 +57,23 @@ namespace Tests.PlayMode {
             }
         }
 
+        protected IHotkeyBar hotkeyBar {
+            get {
+                CustomAssert.HasComponentInChildren<IHotkeyBar>(avatar, out var component);
+                return component;
+            }
+        }
+        protected GameObject hotkeyBarObj => (hotkeyBar as Component).gameObject;
+        protected Image hotkeyFrame {
+            get {
+                var frame = hotkeyBarObj
+                    .GetComponentsInChildren<Image>()
+                    .FirstOrDefault(image => image.sprite && image.sprite.name == Assets.hotkeyFrameSprite);
+                Assert.IsTrue(frame, $"Hotkey bar should contain an image with a sprite called '{Assets.hotkeyFrameSprite}'!");
+                return frame;
+            }
+        }
+
         protected GameObject ground;
 
         protected GameObject levelObj;
@@ -65,14 +84,19 @@ namespace Tests.PlayMode {
             }
         }
 
-        public IEnumerator SpawnAvatarOnGround(Vector3 position, float spawnDuration) {
+        public IEnumerator SpawnAvatar(Vector3 position) {
             var prefab = LoadPrefab(Assets.avatarPrefab);
             yield return new WaitForFixedUpdate();
 
             avatar = InstantiateGameObject(prefab, position + new Vector3(0, 2, 0), Quaternion.identity);
 
             yield return new WaitForFixedUpdate();
+
             Assert.IsFalse(character.isGrounded, $"1 frame after spawning in the void, Avatar's CharacterController should no longer be grounded!");
+        }
+
+        public IEnumerator SpawnAvatarOnGround(Vector3 position, float spawnDuration) {
+            yield return SpawnAvatar(position);
 
             ground = CreatePrimitive(PrimitiveType.Plane, "Ground");
             ground.transform.position = position;

@@ -3,6 +3,7 @@ using TestInterfaces;
 using UnityEngine;
 
 namespace Tests.PlayMode {
+    [AddComponentMenu("")]
     public class LevelMockComponent : MonoBehaviour, ILevel {
         public LevelMock level = new LevelMock();
 

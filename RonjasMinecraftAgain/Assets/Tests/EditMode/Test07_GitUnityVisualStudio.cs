@@ -16,7 +16,7 @@ namespace Tests.EditMode {
         [TestCase("./.git")]
         public void A02b_GitInitialized(string path) {
             var directory = new DirectoryInfo(path);
-            Assert.IsTrue(directory.Exists, $"Directory '{directory.FullName}' not found. Did you initialize git?");
+            Assert.IsTrue(directory.Exists, $"Directory '{directory.FullName}' not found. Your Unity project folders must reside in the root of your repository.");
         }
         [TestCase("./.gitignore")]
         [TestCase("./.editorconfig")]
@@ -27,12 +27,16 @@ namespace Tests.EditMode {
         [Test]
         public void A02d_CompanyNameIsEmailAddress() {
             Assert.AreNotEqual("DefaultCompany", Application.companyName, $"Change Company Name in Project Settings > Player!");
-            Assert.IsTrue(Assets.emailPattern.IsMatch(Application.companyName), $"Company Name must be a valid e-mail address, but was '{Application.companyName}'");
+            StringAssert.IsMatch(Assets.emailPattern, Application.companyName, $"Company Name must be a valid e-mail address, but was '{Application.companyName}'");
+        }
+        [Test]
+        public void A02e_CompanyNameIsELearningAddress() {
+            StringAssert.IsMatch(Assets.elearningPattern, Application.companyName, $"Company Name must be your e-learning address! E-Learning addresses start with either 's' or 'bt'.");
         }
         [TestCase("com.unity.inputsystem", "1.2.0")]
         [TestCase("com.unity.textmeshpro", "3.0.6")]
         [TestCase("com.unity.render-pipelines.universal", "12.1.2")]
-        public async void A02e_PackageIsVersion(string package, string version) {
+        public async void A02f_PackageIsVersion(string package, string version) {
             var search = Client.List(true, false);
 
             do {

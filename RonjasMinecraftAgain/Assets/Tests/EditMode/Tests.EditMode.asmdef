@@ -6,7 +6,8 @@
         "UnityEditor.TestRunner",
         "TestUtils",
         "TestInterfaces",
-        "Unity.InputSystem"
+        "Unity.InputSystem",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [
         "Editor"
