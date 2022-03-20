@@ -4,7 +4,7 @@ using UnityEngine;
 using TestInterfaces;
 using UnityEngine.InputSystem;
 
-public class Avatar : MonoBehaviour, IMovableAvatar, IRotatableAvatar, IBuildingAvatar {
+public class Avatar : MonoBehaviour, IMovableAvatar, IRotatableAvatar, IBuildingAvatar, ILevelAvatar {
     
 
     [Header("MonoBehaviour configuration")]
@@ -111,7 +111,10 @@ public void SetIntendedMovement(Vector2 intendedMovement) {
     [SerializeField]
     private float extends = 0;
     private float dicklength;
-    
+
+    public ILevel level { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+    public GameObject currentlySelectedBlockPrefab { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
     public Quaternion GetBodyRotation() {
         return transform.rotation;
     }
@@ -166,7 +169,15 @@ public void SetIntendedMovement(Vector2 intendedMovement) {
         return dicklength;
 
         }
+
+    public void BuildBlockInLevel() {
+        throw new System.NotImplementedException();
     }
+
+    public void DestroyBlockInLevel() {
+        throw new System.NotImplementedException();
+    }
+}
     //Wohin?
 
     //IBuilding Ende

@@ -26,17 +26,16 @@ public class Level : MonoBehaviour, ILevel
     }
 
     protected void FixedUpdate() {
-     
+
         for (int x = 0; x < size.x; x++) {
             for (int y = 0; y < size.y; y++) {
                 for (int z = 0; z < size.y; z++) {
                     var instance = map[x][y][z];
                     if (instance) {
-                        //??????
                     }
                 }
             }
-        }          
+        }
     }
 
 
@@ -68,6 +67,8 @@ public class Level : MonoBehaviour, ILevel
         if (prefab) {
             map[position.x][position.y][position.z] = Instantiate(prefab, position, Quaternion.identity, transform);
         }
+
+        onLevelChange?.Invoke(position, map[position.x][position.y][position.z]);
         return true;
     }
 
@@ -84,7 +85,8 @@ public class Level : MonoBehaviour, ILevel
         }
         map[positionA.x][positionA.y][positionA.z] = blockB;
         map[positionB.x][positionB.y][positionB.z] = blockA;
-
+        onLevelChange?.Invoke(positionA, blockA);
+        onLevelChange?.Invoke(positionB, blockB);
         return true;
     }
 
