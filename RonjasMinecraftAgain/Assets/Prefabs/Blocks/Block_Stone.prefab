@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -2975168633926946158}
   - component: {fileID: 7762471041531662854}
   - component: {fileID: 568120738772063140}
+  - component: {fileID: 3486336203612217591}
   m_Layer: 0
   m_Name: Block_Stone
   m_TagString: Block
@@ -97,3 +98,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3362308067575612143}
   m_Mesh: {fileID: 4300000, guid: 7dcfeefc86f42204f8fb5299594b3de8, type: 2}
+--- !u!114 &3486336203612217591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3362308067575612143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2ccb8fb8661b947a3dbd47e2e314e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_blockId: 1
+  m_sprite: {fileID: -2058351957, guid: 52555a79677ebb643a392b7e961c094a, type: 3}

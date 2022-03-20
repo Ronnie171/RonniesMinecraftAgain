@@ -112,8 +112,14 @@ public void SetIntendedMovement(Vector2 intendedMovement) {
     private float extends = 0;
     private float dicklength;
 
-    public ILevel level { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-    public GameObject currentlySelectedBlockPrefab { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+    public ILevel level { get; set; }
+
+    protected void Awake() {
+        level = FindObjectOfType<Level>();
+    }
+    public GameObject currentlySelectedBlockPrefab 
+        { get => blockPrefab;
+        set => blockPrefab = value; }
 
     public Quaternion GetBodyRotation() {
         return transform.rotation;

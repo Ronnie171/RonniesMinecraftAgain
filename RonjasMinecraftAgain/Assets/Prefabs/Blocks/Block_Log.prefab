@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 171955163075297022}
   - component: {fileID: 7909222715421748338}
   - component: {fileID: -50145660429920215}
+  - component: {fileID: 7773617069695272705}
   m_Layer: 0
   m_Name: Block_Log
   m_TagString: Block
@@ -99,3 +100,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7489512636433765007}
   m_Mesh: {fileID: 4300000, guid: c36404440d8e77947885a49cd10a22b5, type: 2}
+--- !u!114 &7773617069695272705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7489512636433765007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2ccb8fb8661b947a3dbd47e2e314e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_blockId: 17
+  m_sprite: {fileID: 2041314826, guid: 52555a79677ebb643a392b7e961c094a, type: 3}

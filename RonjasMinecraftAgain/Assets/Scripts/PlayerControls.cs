@@ -225,6 +225,234 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""UI"",
+            ""id"": ""01410be0-8eb1-4d72-9c95-d96d872c5f08"",
+            ""actions"": [
+                {
+                    ""name"": ""SelectHotKey1"",
+                    ""type"": ""Button"",
+                    ""id"": ""7ee625f9-53fb-479d-8e7c-e57aede0d38e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SelectHotKey2"",
+                    ""type"": ""Button"",
+                    ""id"": ""7ba48fc5-a6af-4adf-a161-66bae49a8717"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SelectHotKey3"",
+                    ""type"": ""Button"",
+                    ""id"": ""e1894401-5b6a-46d9-88df-e8fbeca4cb59"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SelectHotKey4"",
+                    ""type"": ""Button"",
+                    ""id"": ""4e1f64cf-f7f1-4dbf-9f17-9730ef683cc6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SelectHotKey5"",
+                    ""type"": ""Button"",
+                    ""id"": ""c7311bf2-e4e1-466c-9438-6af6e8f1c288"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SelectHotKey6"",
+                    ""type"": ""Button"",
+                    ""id"": ""d33f3fdc-a6ea-484f-9ac7-ed11fbe876ae"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SelectHotKey7"",
+                    ""type"": ""Button"",
+                    ""id"": ""eb52db7c-ffc6-47f2-aaa8-d29293fbbda8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SelectHotKey8"",
+                    ""type"": ""Button"",
+                    ""id"": ""e57cfb71-bb35-4782-9456-563becd328fd"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SelectHotKey9"",
+                    ""type"": ""Button"",
+                    ""id"": ""38ad8f95-db58-4ace-b977-17b570ac5d7d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SelectHotKeyMouse"",
+                    ""type"": ""Value"",
+                    ""id"": ""78aa1387-653f-42a1-8f03-eb6e71812c96"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""TogglePause"",
+                    ""type"": ""Button"",
+                    ""id"": ""038c4205-703a-48ec-9797-1397b6807a2d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""b3d6f412-eeef-4c9c-ba68-257d1d1b88c2"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectHotKey2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f545d89f-8aa1-43d4-9f28-38146e51b81b"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectHotKey3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""71e3aa66-572d-4aea-8faf-635cbe95ffec"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectHotKey4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dcdc4f5e-caf1-45f1-a102-261676f8e8a5"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectHotKey5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""290802fd-a594-4cbd-b7ed-62ffc12ad132"",
+                    ""path"": ""<Keyboard>/6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectHotKey6"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""48e65cf1-0900-4ce1-8e76-7e82c7163f8d"",
+                    ""path"": ""<Keyboard>/8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectHotKey8"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7e27685a-ac52-44d4-89f4-a5a9078b6f1f"",
+                    ""path"": ""<Keyboard>/9"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectHotKey9"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""03baaf84-8d30-4a45-986b-c285d7495a72"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectHotKeyMouse"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""215ec3a0-b6c6-49c1-867a-1e89f8c51e12"",
+                    ""path"": ""<Keyboard>/7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectHotKey7"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""55968eaa-4cae-4d76-b4ed-d760f1f95d80"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectHotKey1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a026dbee-529d-4870-94db-ec3702b81862"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TogglePause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -238,6 +466,19 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Avatar_BuildBlock = m_Avatar.FindAction("BuildBlock", throwIfNotFound: true);
         m_Avatar_TrapCursor = m_Avatar.FindAction("TrapCursor", throwIfNotFound: true);
         m_Avatar_UntrapCursor = m_Avatar.FindAction("UntrapCursor", throwIfNotFound: true);
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_SelectHotKey1 = m_UI.FindAction("SelectHotKey1", throwIfNotFound: true);
+        m_UI_SelectHotKey2 = m_UI.FindAction("SelectHotKey2", throwIfNotFound: true);
+        m_UI_SelectHotKey3 = m_UI.FindAction("SelectHotKey3", throwIfNotFound: true);
+        m_UI_SelectHotKey4 = m_UI.FindAction("SelectHotKey4", throwIfNotFound: true);
+        m_UI_SelectHotKey5 = m_UI.FindAction("SelectHotKey5", throwIfNotFound: true);
+        m_UI_SelectHotKey6 = m_UI.FindAction("SelectHotKey6", throwIfNotFound: true);
+        m_UI_SelectHotKey7 = m_UI.FindAction("SelectHotKey7", throwIfNotFound: true);
+        m_UI_SelectHotKey8 = m_UI.FindAction("SelectHotKey8", throwIfNotFound: true);
+        m_UI_SelectHotKey9 = m_UI.FindAction("SelectHotKey9", throwIfNotFound: true);
+        m_UI_SelectHotKeyMouse = m_UI.FindAction("SelectHotKeyMouse", throwIfNotFound: true);
+        m_UI_TogglePause = m_UI.FindAction("TogglePause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -374,6 +615,119 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         }
     }
     public AvatarActions @Avatar => new AvatarActions(this);
+
+    // UI
+    private readonly InputActionMap m_UI;
+    private IUIActions m_UIActionsCallbackInterface;
+    private readonly InputAction m_UI_SelectHotKey1;
+    private readonly InputAction m_UI_SelectHotKey2;
+    private readonly InputAction m_UI_SelectHotKey3;
+    private readonly InputAction m_UI_SelectHotKey4;
+    private readonly InputAction m_UI_SelectHotKey5;
+    private readonly InputAction m_UI_SelectHotKey6;
+    private readonly InputAction m_UI_SelectHotKey7;
+    private readonly InputAction m_UI_SelectHotKey8;
+    private readonly InputAction m_UI_SelectHotKey9;
+    private readonly InputAction m_UI_SelectHotKeyMouse;
+    private readonly InputAction m_UI_TogglePause;
+    public struct UIActions
+    {
+        private @PlayerControls m_Wrapper;
+        public UIActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @SelectHotKey1 => m_Wrapper.m_UI_SelectHotKey1;
+        public InputAction @SelectHotKey2 => m_Wrapper.m_UI_SelectHotKey2;
+        public InputAction @SelectHotKey3 => m_Wrapper.m_UI_SelectHotKey3;
+        public InputAction @SelectHotKey4 => m_Wrapper.m_UI_SelectHotKey4;
+        public InputAction @SelectHotKey5 => m_Wrapper.m_UI_SelectHotKey5;
+        public InputAction @SelectHotKey6 => m_Wrapper.m_UI_SelectHotKey6;
+        public InputAction @SelectHotKey7 => m_Wrapper.m_UI_SelectHotKey7;
+        public InputAction @SelectHotKey8 => m_Wrapper.m_UI_SelectHotKey8;
+        public InputAction @SelectHotKey9 => m_Wrapper.m_UI_SelectHotKey9;
+        public InputAction @SelectHotKeyMouse => m_Wrapper.m_UI_SelectHotKeyMouse;
+        public InputAction @TogglePause => m_Wrapper.m_UI_TogglePause;
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void SetCallbacks(IUIActions instance)
+        {
+            if (m_Wrapper.m_UIActionsCallbackInterface != null)
+            {
+                @SelectHotKey1.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey1;
+                @SelectHotKey1.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey1;
+                @SelectHotKey1.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey1;
+                @SelectHotKey2.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey2;
+                @SelectHotKey2.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey2;
+                @SelectHotKey2.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey2;
+                @SelectHotKey3.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey3;
+                @SelectHotKey3.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey3;
+                @SelectHotKey3.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey3;
+                @SelectHotKey4.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey4;
+                @SelectHotKey4.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey4;
+                @SelectHotKey4.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey4;
+                @SelectHotKey5.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey5;
+                @SelectHotKey5.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey5;
+                @SelectHotKey5.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey5;
+                @SelectHotKey6.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey6;
+                @SelectHotKey6.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey6;
+                @SelectHotKey6.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey6;
+                @SelectHotKey7.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey7;
+                @SelectHotKey7.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey7;
+                @SelectHotKey7.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey7;
+                @SelectHotKey8.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey8;
+                @SelectHotKey8.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey8;
+                @SelectHotKey8.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey8;
+                @SelectHotKey9.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey9;
+                @SelectHotKey9.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey9;
+                @SelectHotKey9.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKey9;
+                @SelectHotKeyMouse.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKeyMouse;
+                @SelectHotKeyMouse.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKeyMouse;
+                @SelectHotKeyMouse.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSelectHotKeyMouse;
+                @TogglePause.started -= m_Wrapper.m_UIActionsCallbackInterface.OnTogglePause;
+                @TogglePause.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnTogglePause;
+                @TogglePause.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnTogglePause;
+            }
+            m_Wrapper.m_UIActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @SelectHotKey1.started += instance.OnSelectHotKey1;
+                @SelectHotKey1.performed += instance.OnSelectHotKey1;
+                @SelectHotKey1.canceled += instance.OnSelectHotKey1;
+                @SelectHotKey2.started += instance.OnSelectHotKey2;
+                @SelectHotKey2.performed += instance.OnSelectHotKey2;
+                @SelectHotKey2.canceled += instance.OnSelectHotKey2;
+                @SelectHotKey3.started += instance.OnSelectHotKey3;
+                @SelectHotKey3.performed += instance.OnSelectHotKey3;
+                @SelectHotKey3.canceled += instance.OnSelectHotKey3;
+                @SelectHotKey4.started += instance.OnSelectHotKey4;
+                @SelectHotKey4.performed += instance.OnSelectHotKey4;
+                @SelectHotKey4.canceled += instance.OnSelectHotKey4;
+                @SelectHotKey5.started += instance.OnSelectHotKey5;
+                @SelectHotKey5.performed += instance.OnSelectHotKey5;
+                @SelectHotKey5.canceled += instance.OnSelectHotKey5;
+                @SelectHotKey6.started += instance.OnSelectHotKey6;
+                @SelectHotKey6.performed += instance.OnSelectHotKey6;
+                @SelectHotKey6.canceled += instance.OnSelectHotKey6;
+                @SelectHotKey7.started += instance.OnSelectHotKey7;
+                @SelectHotKey7.performed += instance.OnSelectHotKey7;
+                @SelectHotKey7.canceled += instance.OnSelectHotKey7;
+                @SelectHotKey8.started += instance.OnSelectHotKey8;
+                @SelectHotKey8.performed += instance.OnSelectHotKey8;
+                @SelectHotKey8.canceled += instance.OnSelectHotKey8;
+                @SelectHotKey9.started += instance.OnSelectHotKey9;
+                @SelectHotKey9.performed += instance.OnSelectHotKey9;
+                @SelectHotKey9.canceled += instance.OnSelectHotKey9;
+                @SelectHotKeyMouse.started += instance.OnSelectHotKeyMouse;
+                @SelectHotKeyMouse.performed += instance.OnSelectHotKeyMouse;
+                @SelectHotKeyMouse.canceled += instance.OnSelectHotKeyMouse;
+                @TogglePause.started += instance.OnTogglePause;
+                @TogglePause.performed += instance.OnTogglePause;
+                @TogglePause.canceled += instance.OnTogglePause;
+            }
+        }
+    }
+    public UIActions @UI => new UIActions(this);
     public interface IAvatarActions
     {
         void OnJump(InputAction.CallbackContext context);
@@ -383,5 +737,19 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnBuildBlock(InputAction.CallbackContext context);
         void OnTrapCursor(InputAction.CallbackContext context);
         void OnUntrapCursor(InputAction.CallbackContext context);
+    }
+    public interface IUIActions
+    {
+        void OnSelectHotKey1(InputAction.CallbackContext context);
+        void OnSelectHotKey2(InputAction.CallbackContext context);
+        void OnSelectHotKey3(InputAction.CallbackContext context);
+        void OnSelectHotKey4(InputAction.CallbackContext context);
+        void OnSelectHotKey5(InputAction.CallbackContext context);
+        void OnSelectHotKey6(InputAction.CallbackContext context);
+        void OnSelectHotKey7(InputAction.CallbackContext context);
+        void OnSelectHotKey8(InputAction.CallbackContext context);
+        void OnSelectHotKey9(InputAction.CallbackContext context);
+        void OnSelectHotKeyMouse(InputAction.CallbackContext context);
+        void OnTogglePause(InputAction.CallbackContext context);
     }
 }

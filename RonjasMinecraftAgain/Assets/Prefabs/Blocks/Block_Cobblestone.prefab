@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -4923908195190541675}
   - component: {fileID: -8576018816393471678}
   - component: {fileID: 4904462709358944789}
+  - component: {fileID: -5226624432573734368}
   m_Layer: 0
   m_Name: Block_Cobblestone
   m_TagString: Block
@@ -97,3 +98,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4529634826043887123}
   m_Mesh: {fileID: 4300000, guid: 7dcfeefc86f42204f8fb5299594b3de8, type: 2}
+--- !u!114 &-5226624432573734368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4529634826043887123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2ccb8fb8661b947a3dbd47e2e314e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_blockId: 4
+  m_sprite: {fileID: -1475059996, guid: 52555a79677ebb643a392b7e961c094a, type: 3}
